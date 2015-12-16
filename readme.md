@@ -1,8 +1,13 @@
-# Dolphin Platform Spring Boot Sample
+# Dolphin Platform Charts Sample
 
 ![Dolphin Platform Logo](http://www.guigarage.com/wordpress/wp-content/uploads/2015/10/logo.png)
 
-This automatically created project can be used as a basic skeleton for a Spring Boot based Dolphin Platform application.
+This project contains a Dolphin Platform based client server application that shows how JavaFX charts can be used with Dolphin Platform.
+The project is currently based on Dolphin Platform 0.7 and uses a Spring Boot based server and a JavaFX based client. Currently the use of converters for JavaFX List bindings is not part of Dolphin Platform and will be added to the next release. Therefore the helper class FXWrapper2 is added to the client module. In future Dolphin Platform releases this functionallity will be part of the platform API.  
+
+![Client Preview](http://www.guigarage.com/wordpress/wp-content/uploads/2015/12/dolphin-charts.png)
+
+
 The Maven projects contains 3 modules: 
 
 * The __common__ module that contains the model taht is shared between client and server
