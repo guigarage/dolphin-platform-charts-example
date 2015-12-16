@@ -17,7 +17,7 @@ The Maven projects contains 3 modules:
 
 ## How to use it
 The project is created as a Maven project. You can directly import it in any IDE that supports Maven (like Eclipse, Netbeans or IntelliJ).
-If you want to start the application you need to start the ServerApplication class in the server module and than the ClientApplication class in the client module. The client can be started several times.
+If you want to start the application you need to start the __ServerApplication__ class in the server module and than the __ClientApplication__ class in the client module. The client can be started several times.
 
 If you want to start the application from commandline without IDE support you need to call a Maven install first in the main project folder:
 
