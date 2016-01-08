@@ -2,11 +2,9 @@ package com.guigarage.view;
 
 import com.canoo.dolphin.client.ClientContext;
 import com.canoo.dolphin.client.javafx.AbstractViewBinder;
-import com.canoo.dolphin.client.javafx.BidirectionalConverter;
+import com.canoo.dolphin.client.javafx.Converter;
 import com.canoo.dolphin.client.javafx.FXBinder;
-import com.canoo.dolphin.client.javafx.FXWrapper;
 import com.guigarage.Constants;
-import com.guigarage.util.FXWrapper2;
 import com.guigarage.model.ChartData;
 import com.guigarage.model.MyModel;
 import javafx.fxml.FXML;
@@ -29,24 +27,22 @@ public class MyViewBinder extends AbstractViewBinder<MyModel> {
     @Override
     protected void init() {
         try {
+
+            //Configure UI
             XYChart.Series<String, Integer> townCountSeries = new XYChart.Series<>();
             chart.dataProperty().get().add(townCountSeries);
             chart.setLegendVisible(false);
-            townCountSeries.setData(FXWrapper2.wrapList(getModel().getChartData(), new DataConverter()));
 
+            //Bind UI to Dolphin Platform Model
+            FXBinder.bind(townCountSeries.getData()).to(getModel().getChartData(), new DataConverter());
             FXBinder.bind(countrySelection.valueProperty()).bidirectionalTo(getModel().selectedCountryProperty());
-            countrySelection.setItems(FXWrapper.wrapList(getModel().getCountries()));
+            FXBinder.bind(countrySelection.getItems()).to(getModel().getCountries());
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    private class DataConverter implements BidirectionalConverter<ChartData, XYChart.Data<String, Integer>> {
-
-        @Override
-        public ChartData convertBack(XYChart.Data<String, Integer> value) {
-            throw new RuntimeException("DP API ERROR!");
-        }
+    private class DataConverter implements Converter<ChartData, XYChart.Data<String, Integer>> {
 
         @Override
         public XYChart.Data<String, Integer> convert(ChartData value) {

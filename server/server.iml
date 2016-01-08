@@ -9,8 +9,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: com.canoo.dolphin-platform:dolphin-platform-server-spring:0.7.0" level="project" />
-    <orderEntry type="library" name="Maven: com.canoo.dolphin-platform:dolphin-platform-server:0.7.0" level="project" />
+    <orderEntry type="library" name="Maven: com.canoo.dolphin-platform:dolphin-platform-server-spring:0.8.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: com.canoo.dolphin-platform:dolphin-platform-server:0.8.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.open-dolphin:dolphin-server:1.0-RC1" level="project" />
     <orderEntry type="library" name="Maven: javax.inject:javax.inject:1" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.groovy:groovy:2.3.6" level="project" />
@@ -50,7 +50,7 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:4.1.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.10" level="project" />
     <orderEntry type="module" module-name="common" />
-    <orderEntry type="library" name="Maven: com.canoo.dolphin-platform:dolphin-platform-core:0.7.0" level="project" />
+    <orderEntry type="library" name="Maven: com.canoo.dolphin-platform:dolphin-platform-core:0.8.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.open-dolphin:dolphin-shared:1.0-RC1" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.gpars:gpars:1.2.1" level="project" />
     <orderEntry type="library" name="Maven: org.multiverse:multiverse-core:0.7.0" level="project" />
